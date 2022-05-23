@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/btn_more.xml" value="0.2585" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/btn_stroke.xml" value="0.255" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/divider_dotted_line.xml" value="0.2595" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/dotted_line.xml" value="0.205" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/et_rounded_background.xml" value="0.2595" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/form_rounded_background.xml" value="0.2595" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/ic_arrow_back.xml" value="0.124" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/ic_arrow_down.xml" value="0.2595" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/ic_arrow_up.xml" value="0.2595" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/ic_help.xml" value="0.124" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1535" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/ic_share.xml" value="0.1535" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/rounded_corner.xml" value="0.2595" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/top_rounded_corner.xml" value="0.2565" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/tv_rounded_background.xml" value="0.255" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/tv_top_rounded_background.xml" value="0.255" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/font/poppins.xml" value="0.28" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_calculate.xml" value="0.1" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_help_center.xml" value="0.264" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_history.xml" value="0.24010416666666667" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_result.xml" value="0.218970736629667" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/cardview_result_detail.xml" value="0.4" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/fragment_result_detail_information.xml" value="0.264" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_form.xml" value="0.264" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_form_input.xml" value="0.253125" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_help.xml" value="0.253125" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_history.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_quick_action.xml" value="0.264" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_result_information.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_value.xml" value="0.253125" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/toolbar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/toolbar_history.xml" value="0.253125" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/toolbar_home.xml" value="0.253125" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/toolbar_result.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/menu/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/menu/hasil_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/menu/result_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/menu/toolbar_history.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/menu/toolbar_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/menu/toolbar_result.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
