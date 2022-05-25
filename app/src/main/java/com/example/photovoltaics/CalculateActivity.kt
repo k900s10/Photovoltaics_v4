@@ -3,6 +3,7 @@ package com.example.photovoltaics
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import com.example.photovoltaics.databinding.ActivityCalculateBinding
 
 class CalculateActivity : AppCompatActivity() {
@@ -18,11 +19,16 @@ class CalculateActivity : AppCompatActivity() {
     }
 
     private fun toolbarDisplay() {
-        val menu = binding.toolbar.toolbar
+        val toolbar = binding.toolbar.toolbar
         val title = binding.toolbar.title
         title.setText(R.string.title_calculate)
 
-        menu.setOnMenuItemClickListener { item ->
+        toolbar.navigationIcon =
+            AppCompatResources.getDrawable(applicationContext, R.drawable.ic_ab_arrow_back)
+        toolbar.setNavigationOnClickListener { onBackPressed() }
+
+
+        toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.history_btn_help -> {
                     redirect(applicationContext, HelpCenterActivity::class.java)
@@ -34,6 +40,7 @@ class CalculateActivity : AppCompatActivity() {
 
     private fun formDisplay() {
         val btnClear = binding.btnClear
+        val btnCalculate = binding.btnCalculate
 
         val roofLengthTitle = binding.cardView1.formTitle1
         val roofLengthInput = binding.cardView1.formInput1
@@ -59,6 +66,10 @@ class CalculateActivity : AppCompatActivity() {
             roofLengthInput.text.clear()
             roofWidthInput.text.clear()
             plnInput.text.clear()
+        }
+
+        btnCalculate.setOnClickListener {
+            redirect(applicationContext, ResultActivity::class.java)
         }
     }
 }

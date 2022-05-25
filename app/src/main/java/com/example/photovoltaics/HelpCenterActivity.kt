@@ -14,22 +14,22 @@ class HelpCenterActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //set up dropdown function
-        val btnFaq1 = binding.includeFaq1.button
-        val btnFaq2 = binding.includeFaq2.button
-        val btnFaq3 = binding.includeFaq3.button
-        val descriptionFaq1 = binding.includeFaq1.description
-        val descriptionFaq2 = binding.includeFaq2.description
-        val descriptionFaq3 = binding.includeFaq3.description
+        val btnFaq1 = binding.faq1.button
+        val btnFaq2 = binding.faq2.button
+        val btnFaq3 = binding.faq3.button
+        val descriptionFaq1 = binding.faq1.description
+        val descriptionFaq2 = binding.faq2.description
+        val descriptionFaq3 = binding.faq3.description
 
         dropdown(btnFaq1, textView = descriptionFaq1, context = applicationContext)
         dropdown(btnFaq2, textView = descriptionFaq2, context = applicationContext)
         dropdown(btnFaq3, textView = descriptionFaq3, context = applicationContext)
 
         //modify toolbar
-        val toolbar = binding.includeToolbar.toolbar
-        val title = binding.includeToolbar.title
+        val toolbar = binding.toolbar.toolbar
+        val title = binding.toolbar.title
 
-        title.text = "Help Center"
+        title.text = getString(R.string.title_help_center)
         toolbar.navigationIcon =
             AppCompatResources.getDrawable(applicationContext, R.drawable.ic_ab_arrow_back)
         toolbar.setNavigationOnClickListener { onBackPressed() }
@@ -37,8 +37,9 @@ class HelpCenterActivity : AppCompatActivity() {
 
         val menu = toolbar.menu
         val btnShare = menu.findItem(R.id.result_btn_share)
-        val btnHelpCenter = menu.findItem(R.id.result_btn_help)
+        val btnHelp = menu.findItem(R.id.result_btn_help)
         btnShare.isVisible = false
-        btnHelpCenter.isVisible = false
+        btnHelp.isVisible = false
+
     }
 }

@@ -8,7 +8,7 @@
     tools:context=".HelpCenterActivity">
 
     <include
-        android:id="@+id/include_toolbar"
+        android:id="@+id/toolbar"
         layout="@layout/toolbar_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include_toolbar">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -31,7 +31,7 @@
 
 
             <include
-                android:id="@+id/include_faq_1"
+                android:id="@+id/faq_1"
                 layout="@layout/item_help"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -41,24 +41,24 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <include
-                android:id="@+id/include_faq_2"
+                android:id="@+id/faq_2"
                 layout="@layout/item_help"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/include_faq_1" />
+                app:layout_constraintTop_toBottomOf="@+id/faq_1" />
 
             <include
-                android:id="@+id/include_faq_3"
+                android:id="@+id/faq_3"
                 layout="@layout/item_help"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/include_faq_2" />
+                app:layout_constraintTop_toBottomOf="@+id/faq_2" />
 
             <TextView
                 android:id="@+id/form_header"
@@ -70,7 +70,7 @@
                 android:text="@string/help_center_title_contact_us"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/include_faq_3" />
+                app:layout_constraintTop_toBottomOf="@+id/faq_3" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"

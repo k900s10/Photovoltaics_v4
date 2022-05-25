@@ -9,8 +9,9 @@ import androidx.constraintlayout.widget.ConstraintLayout
 
 fun <T> redirect(context: Context, destination: Class<T>, clear: Boolean = false) {
     val intent = Intent(context, destination)
-    if (clear)
+    if (clear) {
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+    }
     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
     context.startActivity(intent)
 }

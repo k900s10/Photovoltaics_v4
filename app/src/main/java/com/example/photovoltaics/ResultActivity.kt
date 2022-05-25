@@ -1,7 +1,9 @@
 package com.example.photovoltaics
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import com.example.photovoltaics.databinding.ActivityResultBinding
 
 class ResultActivity : AppCompatActivity() {
@@ -22,10 +24,20 @@ class ResultActivity : AppCompatActivity() {
 
         title.text = getString(R.string.result_title)
 
+        toolbar.navigationIcon =
+            AppCompatResources.getDrawable(applicationContext, R.drawable.ic_ab_arrow_back)
+        toolbar.setNavigationOnClickListener {
+            val intent = Intent(applicationContext, HomeActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+            finish()
+        }
+
+
         toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.result_btn_help -> {
-                    redirect(binding.root.context, HelpCenterActivity::class.java)
+                    redirect(applicationContext, HelpCenterActivity::class.java)
                 }
             }
             return@setOnMenuItemClickListener false
