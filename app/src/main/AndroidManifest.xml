@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Photovoltaics">
         <activity
             android:name=".CalculateActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".HistoryActivity"
             android:exported="false" />

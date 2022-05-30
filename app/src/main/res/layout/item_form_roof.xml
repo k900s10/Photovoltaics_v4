@@ -14,17 +14,17 @@
 
 
         <TextView
-            android:id="@+id/form_title_1"
+            android:id="@+id/form_length_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
-            android:text="GMT"
+            android:text="@string/title_roof_length"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/form_input_1"
+            android:id="@+id/form_length_value"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -32,24 +32,25 @@
             android:layout_marginEnd="50dp"
             android:background="@drawable/et_rounded_background"
             android:ems="10"
-            android:hint="GMT"
-            android:inputType="textPersonName"
+            android:hint="@string/title_roof_width"
+            android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/form_title_1" />
+            app:layout_constraintTop_toBottomOf="@+id/form_length_title"
+            android:autofillHints="length" />
 
         <TextView
-            android:id="@+id/form_title_2"
+            android:id="@+id/form_width_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
-            android:text="GMT"
+            android:text="@string/title_roof_width"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/form_input_1" />
+            app:layout_constraintTop_toBottomOf="@+id/form_length_value" />
 
         <EditText
-            android:id="@+id/form_input_2"
+            android:id="@+id/form_width_value"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -57,11 +58,12 @@
             android:layout_marginEnd="50dp"
             android:background="@drawable/et_rounded_background"
             android:ems="10"
-            android:hint="GMT"
-            android:inputType="textPersonName"
+            android:hint="@string/title_roof_length"
+            android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/form_title_2" />
+            app:layout_constraintTop_toBottomOf="@+id/form_width_title"
+            android:autofillHints="width" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

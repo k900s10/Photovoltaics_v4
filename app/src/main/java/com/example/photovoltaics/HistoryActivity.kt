@@ -20,7 +20,7 @@ class HistoryActivity : AppCompatActivity() {
         toolbar.setNavigationOnClickListener { onBackPressed() }
 
         toolbar.setOnMenuItemClickListener { item ->
-            when(item.itemId) {
+            when (item.itemId) {
                 R.id.history_btn_help -> {
                     redirect(applicationContext, HelpCenterActivity::class.java)
                 }

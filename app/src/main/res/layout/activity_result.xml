@@ -7,7 +7,7 @@
     tools:context=".ResultActivity">
 
     <include
-        android:id="@+id/include_toolbar"
+        android:id="@+id/toolbar"
         layout="@layout/toolbar_result"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -25,7 +25,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include_toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TextView
         android:id="@+id/summary_date_created"
@@ -39,7 +39,7 @@
         tools:text="Wednesday, 10 June 2022" />
 
     <TextView
-        android:id="@+id/summary_information_value_1"
+        android:id="@+id/summary_InstalledCapacity_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -49,54 +49,54 @@
         tools:text="Rp1.000.000" />
 
     <TextView
-        android:id="@+id/summary_information_title_1"
+        android:id="@+id/summary_InstalledCapacity_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
-        android:text="@string/result_title_yearly_income_dummy"
+        android:text="@string/title_installed_capacity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/summary_date_created" />
 
     <TextView
-        android:id="@+id/summary_information_value_2"
+        android:id="@+id/summary_energy_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/summary_information_value_1"
+        app:layout_constraintTop_toBottomOf="@+id/summary_InstalledCapacity_title"
         tools:text="Rp1.000.000" />
 
     <TextView
-        android:id="@+id/summary_information_title_2"
+        android:id="@+id/summary_energy_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="@string/result_title_yearly_income_dummy"
+        android:text="@string/income_title_energy"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/summary_information_title_1" />
+        app:layout_constraintTop_toBottomOf="@+id/summary_InstalledCapacity_title" />
 
     <TextView
-        android:id="@+id/summary_information_value_3"
+        android:id="@+id/summary_income_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/summary_information_value_2"
+        app:layout_constraintTop_toBottomOf="@+id/summary_energy_title"
         tools:text="Rp1.000.000" />
 
     <TextView
-        android:id="@+id/summary_information_title_3"
+        android:id="@+id/summary_income_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="@string/result_title_yearly_income_dummy"
+        android:text="@string/title_income"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/summary_information_title_2" />
+        app:layout_constraintTop_toBottomOf="@+id/summary_energy_title" />
 
     <ImageView
         android:id="@+id/linebreak"
@@ -107,7 +107,7 @@
         android:layout_marginEnd="20dp"
         android:layerType="software"
         android:src="@drawable/divider_dotted_line"
-        app:layout_constraintTop_toBottomOf="@+id/summary_information_title_3"
+        app:layout_constraintTop_toBottomOf="@+id/summary_income_title"
         tools:ignore="ContentDescription"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -146,8 +146,8 @@
             android:visibility="visible">
 
             <include
-                android:id="@+id/result_detail_information_card_View_1"
-                layout="@layout/item_result_information"
+                android:id="@+id/result_detail_initial_data"
+                layout="@layout/item_result_initial_data"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -158,8 +158,8 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <include
-                android:id="@+id/result_detail_information_card_View_2"
-                layout="@layout/item_result_information"
+                android:id="@+id/result_detail_installed_capacity"
+                layout="@layout/item_result_installed_capacity"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -167,11 +167,11 @@
                 android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/result_detail_information_card_View_1" />
+                app:layout_constraintTop_toBottomOf="@+id/result_detail_initial_data" />
 
             <include
-                android:id="@+id/result_detail_information_card_View_3"
-                layout="@layout/item_result_information"
+                android:id="@+id/result_detail_invesment_price"
+                layout="@layout/item_result_invesment_price"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -179,11 +179,11 @@
                 android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/result_detail_information_card_View_2" />
+                app:layout_constraintTop_toBottomOf="@+id/result_detail_installed_capacity" />
 
             <include
-                android:id="@+id/result_detail_information_card_View_4"
-                layout="@layout/item_result_information"
+                android:id="@+id/result_detail_income"
+                layout="@layout/item_result_installed_capacity"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -191,19 +191,7 @@
                 android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/result_detail_information_card_View_3" />
-
-            <include
-                android:id="@+id/result_detail_information_card_View_5"
-                layout="@layout/item_result_information"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/result_detail_information_card_View_4" />
+                app:layout_constraintTop_toBottomOf="@+id/result_detail_invesment_price" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

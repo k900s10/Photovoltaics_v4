@@ -23,4 +23,44 @@
     <string name="title_roof_width">Roof Width</string>
     <string name="title_pln">PLN</string>
     <string name="title_help_center">Help Center</string>
+    <string name="initial_data_title_gmt">GMT</string>
+    <string name="initial_data_title_longtitude">Longtitude</string>
+    <string name="initial_data_title_latitude">Latitude</string>
+    <string name="initial_data_title_collector_tilt">Collector Tilt</string>
+    <string name="initial_data_title_azimuth_collector">Azimuth Collector</string>
+    <string name="title_initial_data">Initial Data</string>
+    <string name="title_installed_capacity">Installed Capacity</string>
+    <string name="installed_capacity_title_inverter">Inverter</string>
+    <string name="installed_capacity_title_installed_capacity_max">Installed Capacity Max</string>
+    <string name="title_investment_price">Investment Price</string>
+    <string name="investment_price_title_pv_price">PV Price</string>
+    <string name="investment_price_title_inverter_price">Inverter Price</string>
+    <string name="investment_price_title_mounting_price">Mounting</string>
+    <string name="investment_price_title_other_price">Other</string>
+    <string name="investment_price_title_total_price">Total</string>
+    <string name="title_income">Income</string>
+    <string name="income_title_energy">Energy</string>
+    <string name="msg_coordinate_double">%1$f°</string>
+    <string name="msg_coordinate_int">%1$d°</string>
+    <string name="msg_meter">%1$dm</string>
+    <string name="msg_volt_amper_int">%1$dV⋅A</string>
+    <string name="msg_volt_amper_double">%1$gV⋅A</string>
+    <string name="msg_watt_peak_double">%1$gWp</string>
+    <string name="msg_watt_peak_int">%1$dWp</string>
+    <string name="msg_price">Rp%1$s</string>
+    <string name="msg_energy">%1$gkWh/year</string>
+    <string name="msg_date">%1$s, %2$s</string>
+    <string name="title_feasibility_test">Feasibility Test</string>
+    <string name="action_clear">clear</string>
+
+    <string-array name="power_limit">
+        <item><font color="#757575">Power limit</font></item>
+        <item>900</item>
+        <item>1300</item>
+        <item>2200</item>
+        <item>3500</item>
+        <item>5500</item>
+        <item>6600</item>
+    </string-array>
+
 </resources>

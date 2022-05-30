@@ -13,4 +13,5 @@
     <color name="blue_light">#B5DEFF</color>
     <color name="grey">#F4F4F4</color>
     <color name="text_bold">#252525</color>
+    <color name="text">#757575</color>
 </resources>

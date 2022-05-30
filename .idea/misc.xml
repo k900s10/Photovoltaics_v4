@@ -20,20 +20,26 @@
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/tv_rounded_background.xml" value="0.255" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/drawable/tv_top_rounded_background.xml" value="0.255" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/font/poppins.xml" value="0.28" />
-        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_calculate.xml" value="0.264" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_calculate.xml" value="0.1941830624465355" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_help_center.xml" value="0.264" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_history.xml" value="0.24010416666666667" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_result.xml" value="0.218970736629667" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/activity_result.xml" value="0.264" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/cardview_result_detail.xml" value="0.4" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/fragment_result_detail_information.xml" value="0.264" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_form.xml" value="0.264" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_form_input.xml" value="0.253125" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_form_roof.xml" value="0.4" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_form_spinner.xml" value="0.264" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_help.xml" value="0.253125" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_history.xml" value="0.25416666666666665" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_quick_action.xml" value="0.264" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_result_information.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_result_initial_data.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_result_installed_capacity.xml" value="0.4" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_result_invesment_price.xml" value="0.253125" />
+        <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_result_sizing.xml" value="0.253125" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/item_value.xml" value="0.253125" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/toolbar.xml" value="0.25416666666666665" />
         <entry key="..\:/Project/AndroidStudioProjects/Project/Photovoltaics/app/src/main/res/layout/toolbar_history.xml" value="0.253125" />

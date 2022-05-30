@@ -1,21 +1,60 @@
 package com.example.photovoltaics
 
+import android.R.layout.simple_spinner_dropdown_item
+import android.R.layout.simple_spinner_item
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.photovoltaics.databinding.ActivityCalculateBinding
+import com.example.photovoltaics.viewModel.CalculateViewModel
+import com.example.photovoltaics.viewModel.CalculateViewModelFactory
 
-class CalculateActivity : AppCompatActivity() {
+class CalculateActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     private lateinit var binding: ActivityCalculateBinding
+    private var spinnerValue: Int = 0
+    private lateinit var viewModel: CalculateViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalculateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        viewModel = getViewModel()
+
         toolbarDisplay()
         formDisplay()
+
+        viewModel.calculateResult.observe(this) {
+            val result = it ?: return@observe
+
+            val intent = Intent(applicationContext, ResultActivity::class.java)
+            intent.putExtra(RESULT, result)
+            startActivity(intent)
+        }
+    }
+
+    override fun onItemSelected(parent: AdapterView<*>?, p1: View?, pos: Int, p3: Long) {
+        val choice = parent?.getItemAtPosition(pos).toString()
+
+        if (choice != "Power limit") {
+            spinnerValue = choice.toInt()
+        }
+    }
+
+    override fun onNothingSelected(p0: AdapterView<*>?) {
+    }
+
+    private fun getViewModel(): CalculateViewModel {
+        val factory = CalculateViewModelFactory()
+        val viewModel: CalculateViewModel by viewModels {
+            factory
+        }
+        return viewModel
     }
 
     private fun toolbarDisplay() {
@@ -42,34 +81,42 @@ class CalculateActivity : AppCompatActivity() {
         val btnClear = binding.btnClear
         val btnCalculate = binding.btnCalculate
 
-        val roofLengthTitle = binding.cardView1.formTitle1
-        val roofLengthInput = binding.cardView1.formInput1
-        val roofWidthTitle = binding.cardView1.formTitle2
-        val roofWidthInput = binding.cardView1.formInput2
+        val roofLengthInput = binding.cardView1.formLengthValue.text
+        val roofWidthInput = binding.cardView1.formWidthValue.text
 
-        val plnTitle = binding.cardView2.formTitle1
-        val plnInput = binding.cardView2.formInput1
-        val input2Title = binding.cardView2.formTitle2
-        val input2Input = binding.cardView2.formInput2
+        val plnSpinner = binding.cardView2.spinner
 
-        roofLengthTitle.text = getString(R.string.title_roof_length)
-        roofLengthInput.hint = getString(R.string.title_roof_length)
-        roofWidthTitle.text = getString(R.string.title_roof_width)
-        roofWidthInput.hint = getString(R.string.title_roof_width)
+        ArrayAdapter.createFromResource(
+            applicationContext,
+            R.array.power_limit,
+            simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(simple_spinner_dropdown_item)
 
-        plnTitle.text = getString(R.string.title_pln)
-        plnInput.hint = getString(R.string.title_pln)
-        input2Title.visibility = View.GONE
-        input2Input.visibility = View.GONE
+            plnSpinner.adapter = adapter
+        }
+
 
         btnClear.setOnClickListener {
-            roofLengthInput.text.clear()
-            roofWidthInput.text.clear()
-            plnInput.text.clear()
+            roofLengthInput.clear()
+            roofWidthInput.clear()
         }
 
+        plnSpinner.onItemSelectedListener = this
+
         btnCalculate.setOnClickListener {
-            redirect(applicationContext, ResultActivity::class.java)
+
+            val roofLengthValue = roofLengthInput.toString().toInt()
+            val roofWidthValue = roofWidthInput.toString().toInt()
+
+
+            viewModel.calculate(length = roofLengthValue, width = roofWidthValue, spinnerValue)
         }
+
     }
+
+    companion object {
+        const val RESULT = "CALCULATE_RESULT"
+    }
+
 }
