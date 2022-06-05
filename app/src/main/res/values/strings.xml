@@ -52,6 +52,7 @@
     <string name="msg_date">%1$s, %2$s</string>
     <string name="title_feasibility_test">Feasibility Test</string>
     <string name="action_clear">clear</string>
+    <string name="title_id">ID</string>
 
     <string-array name="power_limit">
         <item><font color="#757575">Power limit</font></item>

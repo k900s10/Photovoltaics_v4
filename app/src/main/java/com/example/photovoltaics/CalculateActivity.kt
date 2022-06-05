@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.photovoltaics.databinding.ActivityCalculateBinding
 import com.example.photovoltaics.viewModel.CalculateViewModel
-import com.example.photovoltaics.viewModel.CalculateViewModelFactory
+import com.example.photovoltaics.viewModel.factory.CalculateViewModelFactory
 
 class CalculateActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     private lateinit var binding: ActivityCalculateBinding
@@ -50,7 +50,7 @@ class CalculateActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
     }
 
     private fun getViewModel(): CalculateViewModel {
-        val factory = CalculateViewModelFactory()
+        val factory = CalculateViewModelFactory.getInstance(applicationContext)
         val viewModel: CalculateViewModel by viewModels {
             factory
         }

@@ -39,5 +39,7 @@ data class CalculateResultModel(
 
     val energy: Double,
 
-    val income: String
+    val income: String,
+
+    val date: String
 ) : Parcelable

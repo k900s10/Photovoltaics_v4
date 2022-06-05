@@ -7,9 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.photovoltaics.databinding.ActivityResultBinding
 import com.example.photovoltaics.model.CalculateResultModel
-import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.util.*
 
 class ResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultBinding
@@ -112,12 +109,8 @@ class ResultActivity : AppCompatActivity() {
         }
 
         //summary
-        val dateFormat = SimpleDateFormat("dd/M/yyyy", Locale.UK)
-        date.text = getString(
-            R.string.msg_date, LocalDate.now().dayOfWeek.name.lowercase(), dateFormat.format(
-                Date()
-            )
-        )
+        date.text = result?.date
+
         summaryInstalledCapacity.text =
             getString(R.string.msg_watt_peak_double, result?.installedCapacity)
         summaryEnergy.text = getString(R.string.msg_energy, result?.energy)
