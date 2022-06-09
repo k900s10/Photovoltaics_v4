@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.photovoltaics">
 
     <application
@@ -11,13 +12,19 @@
         android:theme="@style/Theme.Photovoltaics">
         <activity
             android:name=".CalculateActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".HistoryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".HomeActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,11 +34,20 @@
         <activity
             android:name=".HelpCenterActivity"
             android:exported="false"
-            android:label="Help Center" />
+            android:label="Help Center"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <data android:scheme="mailto" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ResultActivity"
             android:exported="false"
-            android:label="Result" />
+            android:label="Result"
+            android:screenOrientation="sensorPortrait"
+            tools:ignore="LockedOrientationActivity"/>
     </application>
-
 </manifest>

@@ -1,5 +1,8 @@
 package com.example.photovoltaics
 
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
@@ -20,6 +23,7 @@ class HelpCenterActivity : AppCompatActivity() {
         val descriptionFaq1 = binding.faq1.description
         val descriptionFaq2 = binding.faq2.description
         val descriptionFaq3 = binding.faq3.description
+        val btnForm = binding.formButton
 
         dropdown(btnFaq1, textView = descriptionFaq1, context = applicationContext)
         dropdown(btnFaq2, textView = descriptionFaq2, context = applicationContext)
@@ -41,5 +45,35 @@ class HelpCenterActivity : AppCompatActivity() {
         btnShare.isVisible = false
         btnHelp.isVisible = false
 
+
+        btnForm.setOnClickListener {
+            val contactUsSubject = binding.formSubject.text.toString()
+            val contactUsDescription = binding.formDescription.text.toString()
+
+            composeEmail(contactUsSubject, contactUsDescription)
+        }
+
+        btnFaq1.text = getString(R.string.title_what_is_photovoltaics)
+        btnFaq2.text = getString(R.string.title_why_doing_feasibility_test)
+        btnFaq3.text = getString(R.string.title_what_is_the_requirement_for_feasibility_test)
+        descriptionFaq1.text = getString(R.string.msg_what_is_photovoltaics)
+        descriptionFaq2.text = getString(R.string.msg_why_doing_feasibility_test)
+        descriptionFaq3.text = getString(R.string.msg_what_is_the_requirement_for_feasibility_test)
     }
+
+    @SuppressLint("QueryPermissionsNeeded")
+    private fun composeEmail(subject: String, description: String) {
+        val addresses = arrayOf("null@null.null")
+
+        val intent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:") // only email apps should handle this
+            putExtra(Intent.EXTRA_EMAIL, addresses)
+            putExtra(Intent.EXTRA_SUBJECT, subject)
+            putExtra(Intent.EXTRA_TEXT, description)
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
+    }
+
 }

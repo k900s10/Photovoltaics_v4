@@ -90,44 +90,19 @@
                     android:paddingTop="10dp"
                     android:paddingBottom="20dp">
 
+
                     <TextView
-                        android:id="@+id/form_title_name"
+                        android:id="@+id/form_title_subject"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:text="@string/title_name"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/title_subject"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
-                        android:id="@+id/form_name"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:autofillHints="no"
-                        android:background="@drawable/et_rounded_background"
-                        android:ems="13"
-                        android:hint="@string/title_name"
-                        android:inputType="textPersonName"
-                        android:minHeight="48dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/form_title_name" />
-
-                    <TextView
-                        android:id="@+id/form_title_email"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="15dp"
-                        android:text="@string/title_email"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/form_name" />
-
-                    <EditText
-                        android:id="@+id/form_email"
+                        android:id="@+id/form_subject"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
@@ -135,26 +110,26 @@
                         android:layout_marginEnd="10dp"
                         android:background="@drawable/et_rounded_background"
                         android:ems="13"
-                        android:hint="@string/title_email"
+                        android:hint="@string/title_subject"
                         android:importantForAutofill="no"
                         android:inputType="textEmailAddress"
                         android:minHeight="48dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/form_title_email" />
+                        app:layout_constraintTop_toBottomOf="@+id/form_title_subject" />
 
                     <TextView
-                        android:id="@+id/form_title_question"
+                        android:id="@+id/form_title_description"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="15dp"
-                        android:text="@string/title_question"
+                        android:text="@string/title_description"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/form_email" />
+                        app:layout_constraintTop_toBottomOf="@+id/form_subject" />
 
                     <EditText
-                        android:id="@+id/form_question"
+                        android:id="@+id/form_description"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
@@ -162,7 +137,7 @@
                         android:layout_marginEnd="10dp"
                         android:background="@drawable/et_rounded_background"
                         android:fallbackLineSpacing="false"
-                        android:hint="@string/title_question"
+                        android:hint="@string/title_description"
                         android:importantForAutofill="no"
                         android:inputType="textMultiLine|textPersonName"
                         android:lines="5"
@@ -171,7 +146,7 @@
                         android:minLines="1"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/form_title_question" />
+                        app:layout_constraintTop_toBottomOf="@+id/form_title_description" />
 
                     <Button
                         android:id="@+id/form_button"
@@ -184,7 +159,7 @@
                         android:text="@string/action_send"
                         android:textColor="@android:color/secondary_text_light"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/form_question" />
+                        app:layout_constraintTop_toBottomOf="@+id/form_description" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

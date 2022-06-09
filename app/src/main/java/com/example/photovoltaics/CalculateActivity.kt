@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
@@ -16,7 +17,7 @@ import com.example.photovoltaics.viewModel.factory.CalculateViewModelFactory
 
 class CalculateActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     private lateinit var binding: ActivityCalculateBinding
-    private var spinnerValue: Int = 0
+    private var spinnerValue: String = ""
     private lateinit var viewModel: CalculateViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +36,7 @@ class CalculateActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
             val intent = Intent(applicationContext, ResultActivity::class.java)
             intent.putExtra(RESULT, result)
             startActivity(intent)
+            finish()
         }
     }
 
@@ -42,7 +44,7 @@ class CalculateActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
         val choice = parent?.getItemAtPosition(pos).toString()
 
         if (choice != "Power limit") {
-            spinnerValue = choice.toInt()
+            spinnerValue = choice
         }
     }
 
@@ -60,6 +62,7 @@ class CalculateActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
     private fun toolbarDisplay() {
         val toolbar = binding.toolbar.toolbar
         val title = binding.toolbar.title
+
         title.setText(R.string.title_calculate)
 
         toolbar.navigationIcon =
@@ -81,8 +84,8 @@ class CalculateActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
         val btnClear = binding.btnClear
         val btnCalculate = binding.btnCalculate
 
-        val roofLengthInput = binding.cardView1.formLengthValue.text
-        val roofWidthInput = binding.cardView1.formWidthValue.text
+        val roofLengthInput = binding.cardView1.formLengthValue
+        val roofWidthInput = binding.cardView1.formWidthValue
 
         val plnSpinner = binding.cardView2.spinner
 
@@ -98,22 +101,49 @@ class CalculateActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
 
 
         btnClear.setOnClickListener {
-            roofLengthInput.clear()
-            roofWidthInput.clear()
+            roofLengthInput.text?.clear()
+            roofWidthInput.text?.clear()
+            plnSpinner.setSelection(0)
         }
 
         plnSpinner.onItemSelectedListener = this
 
         btnCalculate.setOnClickListener {
+            val roofLengthValue = roofLengthInput.text.toString()
+            val roofWidthValue = roofWidthInput.text.toString()
 
-            val roofLengthValue = roofLengthInput.toString().toInt()
-            val roofWidthValue = roofWidthInput.toString().toInt()
+            viewModel.calculateDataChanged(
+                width = roofWidthValue,
+                length = roofLengthValue,
+                powerPln = spinnerValue
+            )
 
+            viewModel.calculateForm.observe(this) {
+                val result = it ?: return@observe
 
-            viewModel.calculate(length = roofLengthValue, width = roofWidthValue, spinnerValue)
+                if (result.lengthError != null)
+                    roofLengthInput.error = getString(result.lengthError)
+                if (result.widthError != null)
+                    roofWidthInput.error = getString(result.widthError)
+                if (result.plnPowerError != null)
+                    Toast.makeText(
+                        applicationContext,
+                        getString(result.plnPowerError),
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                if (result.isDataValid)
+                    if (roofLengthValue.isNotBlank() && roofWidthValue.isNotBlank())
+                        viewModel.calculate(
+                            length = roofLengthValue.toInt(),
+                            width = roofWidthValue.toInt(),
+                            spinnerValue.toInt()
+                        )
+            }
         }
 
     }
+
 
     companion object {
         const val RESULT = "CALCULATE_RESULT"

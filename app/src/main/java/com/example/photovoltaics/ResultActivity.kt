@@ -86,6 +86,7 @@ class ResultActivity : AppCompatActivity() {
 
         dropdown(dropdownBtn, constrainLayout = dropdownContent)
 
+        resultToolbar.menu.findItem(R.id.result_btn_share).isVisible = false
 
         title.text = getString(R.string.result_title)
 

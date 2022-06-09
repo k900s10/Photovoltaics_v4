@@ -38,6 +38,10 @@ class HomeActivity : AppCompatActivity() {
             redirect(applicationContext, HistoryActivity::class.java)
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
         historyList()
     }
 

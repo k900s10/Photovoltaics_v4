@@ -7,7 +7,8 @@
     <string name="help_title_dummy">How to use?</string>
     <string name="title_name">Name</string>
     <string name="title_email">Email</string>
-    <string name="title_question">Question</string>
+    <string name="title_subject">Subject</string>
+    <string name="title_description">Description</string>
     <string name="result_title">Result</string>
     <string name="result_title_summary">Summary</string>
     <string name="result_title_yearly_income_dummy">Yearly Income</string>
@@ -53,6 +54,16 @@
     <string name="title_feasibility_test">Feasibility Test</string>
     <string name="action_clear">clear</string>
     <string name="title_id">ID</string>
+    <string name="invalid_msg">%1$s is invalid</string>
+    <string name="invalid_width">Width is invalid</string>
+    <string name="invalid_length">Length is invalid</string>
+    <string name="invalid_pln_power">PLN Power is invalid</string>
+    <string name="msg_what_is_photovoltaics">Photovoltaics is the direct conversion of light into electricity at the atomic level. Some materials exhibit a property known as the photoelectric effect that causes them to absorb photons of light and release electrons. When these free electrons are captured, an electric current results that can be used as electricity. \n \n Knier, Gil. (2002). <i>How do Photovoltaics Work?</i>, NASA SCIENCE</string>
+    <string name="msg_why_doing_feasibility_test">The feasibility study determines if the solar project gets the green light by identifying roadblocks in the beginning of the planning phase. \n \n Lozanova, Sarah. (3 Juni 2021). <i>What Is A Solar Energy Feasibility Study?</i>. Greenlancer </string>
+    <string name="msg_what_is_the_requirement_for_feasibility_test">We need the length and width of the roof, also the PLN power you\'re planning to use</string>
+    <string name="title_what_is_photovoltaics">What Is Photovoltaics</string>
+    <string name="title_why_doing_feasibility_test">Why Doing A Feasibility Test</string>
+    <string name="title_what_is_the_requirement_for_feasibility_test">What Is The Requirement For Feasibility Test</string>
 
     <string-array name="power_limit">
         <item><font color="#757575">Power limit</font></item>
