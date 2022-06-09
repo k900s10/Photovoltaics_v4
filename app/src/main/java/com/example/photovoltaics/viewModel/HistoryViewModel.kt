@@ -7,7 +7,7 @@ import com.example.photovoltaics.room.HistoryEntity
 
 class HistoryViewModel(
     val dao: HistoryDao
-): ViewModel() {
+) : ViewModel() {
 
     fun getHistory(): LiveData<List<HistoryEntity>> {
         return dao.getHistory()

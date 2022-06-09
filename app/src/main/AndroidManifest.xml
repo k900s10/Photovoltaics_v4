@@ -24,7 +24,7 @@
             android:name=".HomeActivity"
             android:exported="true"
             android:screenOrientation="sensorPortrait"
-            tools:ignore="LockedOrientationActivity" >
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,6 +48,6 @@
             android:exported="false"
             android:label="Result"
             android:screenOrientation="sensorPortrait"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity" />
     </application>
 </manifest>
