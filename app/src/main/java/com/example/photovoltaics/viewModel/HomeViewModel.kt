@@ -6,7 +6,7 @@ import com.example.photovoltaics.room.HistoryDao
 import com.example.photovoltaics.room.HistoryEntity
 
 class HomeViewModel(
-    val dao: HistoryDao
+    private val dao: HistoryDao
 ) : ViewModel() {
 
     fun getRecentHistory(): LiveData<List<HistoryEntity>> {
